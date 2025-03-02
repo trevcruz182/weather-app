@@ -1,2 +1,2 @@
 # weather-app
-Weather App for Portfolio
+Welcome! This is my weather app, built in HTML, CSS, and JavaScript.
