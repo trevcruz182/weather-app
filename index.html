@@ -6,7 +6,7 @@
     <title>Weather App</title>
     <link rel="stylesheet" href="./style.css">
 </head>
-<body>
+<body id="light-mode">
     <div id="weather-container">
         <h2>Weather App</h2>
         <input type="text" id="city" placeholder="Enter city...">
@@ -27,7 +27,7 @@
         </div>
         <div id="display-controls">
             <button onclick="changeUnits()">°F/°C</button>
-            <button>Dark/Light Mode</button>
+            <button onclick="changeDisplayMode()">Dark/Light Mode</button>
         </div>
     </div>
     <script src="./script.js"></script>

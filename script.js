@@ -1,8 +1,21 @@
 let celsius = true;
+let lightMode = true;
 
 function changeUnits() {
     celsius = !celsius;
     getWeather();
+}
+
+function changeDisplayMode() {
+    const body = document.getElementsByTagName('body')[0];
+    lightMode = !lightMode;
+
+    if(lightMode) {
+        body.id = "light-mode";
+    }
+    else {
+        body.id = "dark-mode";
+    }
 }
 
 function getWeather() {
@@ -67,7 +80,7 @@ function displayWeather(data) {
         }
 
         const temperatureHTML = `
-            <p>${temperature}ºC</p>
+            <p>${temperature}º${celsius ? "C" : "F"}</p>
         `;
 
         const weatherHTML = `
