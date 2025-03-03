@@ -1,3 +1,10 @@
+let celsius = true;
+
+function changeUnits() {
+    celsius = !celsius;
+    getWeather();
+}
+
 function getWeather() {
     const apiKey = '997a0f90429b482e11600de3033bd604';
     const city = document.getElementById('city').value;
@@ -50,10 +57,14 @@ function displayWeather(data) {
     }
     else {
         const cityName = data.name;
-        const temperature = Math.round(data.main.temp - 273.15);
+        let temperature = Math.round(data.main.temp - 273.15);
         const description = data.weather[0].description;
         const iconCode = data.weather[0].icon;
         const iconUrl = `https://openweathermap.org/img/wn/${iconCode}@4x.png`;
+
+        if(!celsius) {
+            temperature = Math.round((temperature * (9/5)) + 32);
+        }
 
         const temperatureHTML = `
             <p>${temperature}ºC</p>
@@ -80,9 +91,13 @@ function displayHourlyForecast(hourlyData) {
     next24Hours.forEach(item => {
         const dateTime = new Date(item.dt * 1000);
         const hour = dateTime.getHours();
-        const temperature = Math.round(item.main.temp - 273.15);
+        let temperature = Math.round(item.main.temp - 273.15);
         const iconCode = item.weather[0].icon;
         const iconUrl = `https://openweathermap.org/img/wn/${iconCode}.png`;
+
+        if(!celsius) {
+            temperature = Math.round((temperature * (9/5)) + 32);
+        }
 
         const hourlyItemHtml = `
             <div class="hourly-item">

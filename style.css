@@ -76,6 +76,11 @@ button:hover {
     justify-content: space-between;
 }
 
+#display-controls {
+    display: flex;
+    justify-content: space-between;
+}
+
 .hourly-item {
     flex: 0 0 auto;
     width: 80px;

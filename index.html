@@ -10,7 +10,9 @@
     <div id="weather-container">
         <h2>Weather App</h2>
         <input type="text" id="city" placeholder="Enter city...">
-        <button onclick="getWeather()">Search</button>
+<!--        <div>-->
+            <button onclick="getWeather()">Search</button>
+<!--        </div>-->
 
         <img id="weather-icon" alt="Weather Icon">
 
@@ -22,6 +24,10 @@
         </div>
         <div id="hourly-forecast">
 
+        </div>
+        <div id="display-controls">
+            <button onclick="changeUnits()">°F/°C</button>
+            <button>Dark/Light Mode</button>
         </div>
     </div>
     <script src="./script.js"></script>
