@@ -51,9 +51,6 @@ function getWeather() {
         });
 }
 
-/*TODO: Implement a feature where a button can toggle between F and C*/
-/*TODO: Implement a toggle for light mode vs dark mode*/
-
 function displayWeather(data) {
     const tempDivInfo = document.getElementById('temp-div');
     const weatherInfoDiv = document.getElementById('weather-info');
