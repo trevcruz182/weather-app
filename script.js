@@ -1,4 +1,4 @@
-let celsius = true;
+let celsius = false;
 let lightMode = true;
 
 function changeUnits() {
